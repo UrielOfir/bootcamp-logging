@@ -110,7 +110,7 @@ ELASTICSEARCH_PORT=<NODEPORT>
   ```
 5. Now we are going to upload a document into each of the indices that we created.
   ```
-  curl -k -u elastic:$PASSWORD -XPOST https://$ELASTICSEARCH_HOST:$ELASTICSEARCH_PORT/app-logs-auth/my_app -H 'Content-Type: application/json' --d @- << EOF
+  curl -k -u elastic:$PASSWORD -XPOST https://$ELASTICSEARCH_HOST:$ELASTICSEARCH_PORT/app-logs-auth/my_app -H 'Content-Type: application/json' -d @- << EOF
   {
   	"timestamp": "2020-01-24 12:34:56",
   	"message": "User logged in",
